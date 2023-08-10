@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #2f363e;
+}
+
+#timewrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#time {
+  display: flex;
+  gap: 40px;
+}
+
+#time .circle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#time .circle svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: rotate(270deg);
+}
+
+#time .circle svg circle {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke: #191919;
+  stroke-width: 4;
+  transform: translate(5px, 5px);
+}
+
+#time .circle svg circle:nth-child(2) {
+  stroke: var(--clr);
+  stroke-dasharray: 440;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+#time div {
+  position: absolute;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+#time .ap {
+  position: relative;
+  font-size: 1rem;
+  transform: translateX(-20px);
+}
+
+.dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+
+.dots::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  width: 15px;
+  height: 15px;
+  background: var(--clr);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
+}
+
+#DigitalTime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6rem;
+  font-size: 2rem;
+  color: white;
+  width: 25rem;
+  padding: 1rem;
+  border-radius: 20px;
+  border: 3px solid rgb(3, 255, 242);
+  box-shadow: 0 0 15px rgba(19, 3, 193, 0.2), 0 0 15px rgb(25, 4, 255),
+    0 0 20px rgb(21, 0, 255), 0 0 20px rgba(0, 255, 238, 0.599),
+    0 0 20px rgba(19, 3, 193, 0.1);
+}
+
+#DigitalTime div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#hours {
+  color: #ff2972;
+}
+
+#minutes {
+  color: #fee800;
+}
+
+#seconds {
+  color: #04fc43;
+}
